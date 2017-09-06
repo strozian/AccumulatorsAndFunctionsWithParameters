@@ -90,7 +90,7 @@ def test_sum_square_roots():
     print('--------------------------------------------------')
 
     expected = 19084
-    answers = sum_cosines(2)
+    answers = sum_square_roots(2)
     print('Test 1 expected:', expected)
     print('       actual:  ', answers)
 
@@ -115,8 +115,12 @@ def sum_square_roots(n):
     #   No fair running the code of  sum_square_roots  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
+    total=2
+    for k in range(n):
 
+       total= total + math.sqrt(2k)
 
+    return total
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
