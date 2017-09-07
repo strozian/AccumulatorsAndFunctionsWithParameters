@@ -34,13 +34,13 @@ def test_sum_cosines():
     print('Test 1 expected:', expected)
     print('       actual:  ', answers)
 
-    expected = 19084
-    answers = sum_cosines(2)
+    expected = 1
+    answers = sum_cosines(0)
     print('Test 1 expected:', expected)
     print('       actual:  ', answers)
 
-    expected = 19084
-    answers = sum_cosines(2)
+    expected = 1.540302
+    answers = sum_cosines(1)
     print('Test 1 expected:', expected)
     print('       actual:  ', answers)
 
@@ -77,7 +77,7 @@ def sum_cosines(n):
 def test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # Done: 4. Implement this function.
     #   It TESTS the  sum_square_roots  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -89,11 +89,18 @@ def test_sum_square_roots():
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
 
-    expected = 19084
-    answers = sum_square_roots(2)
+    expected = 11.854408
+    answers = sum_square_roots(5)
     print('Test 1 expected:', expected)
     print('       actual:  ', answers)
-
+    expected = 1.414213562
+    answers = sum_square_roots(1)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answers)
+    expected = 0
+    answers = sum_square_roots(0)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answers)
 def sum_square_roots(n):
     """
     What comes in:  A non-negative integer n.
@@ -108,17 +115,17 @@ def sum_square_roots(n):
       which is about 11.854408.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
     #   No fair running the code of  sum_square_roots  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-    total=2
-    for k in range(n):
+    total=0
+    for k in range(n+1):
 
-       total= total + math.sqrt(2k)
+       total = total + math.sqrt(2*k)
 
     return total
 # ----------------------------------------------------------------------
